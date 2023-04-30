@@ -1,3 +1,6 @@
+/* start project */
+
+/* General CSS [Start] */
 *{
     margin: 0;
     padding: 0;
@@ -11,19 +14,25 @@ a{
     font-family: poppins;
 }
 
-.container{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-
+@media (min-width: 2100px){
+.container {
+  max-width: 2000px;}
 }
 
+.container{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+/* General CSS [end] */
 
+
+/* Header start */
 .header{
     display: flex;
     width: 100%;
     background-color: #fff;
-    box-shadow: 0 5px 10px rgb(0, 0, 0,.1);
     margin: auto;
     z-index: 1000;
     position: fixed;
@@ -35,10 +44,16 @@ a{
     justify-content: space-between;
 }
 
+.header#header-scrolled{
+  transition: all 0.5s;
+  box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+}
+
 .logo{
     margin-left: 110px;
 }
 
+/* Menu start */
 
 .main-menu {
     float: right;
@@ -65,6 +80,7 @@ a{
     padding: 0 8px;
     font-size: 17px;
     font-weight: 600;
+    transition-duration: 0.5s;
 }
 
 
@@ -89,7 +105,8 @@ a{
     width: max-content;
     display: block;
     transition-property: all;
-    transition-duration: 0.2;
+    transition-duration: 0.5s;
+    box-shadow: 1px 15px 35px 1px #999;
     transition-delay: 0.2s;
     visibility: hidden;
     opacity: 0;
@@ -113,6 +130,7 @@ a{
     font-family: poppins , sans-serif;
     display: block;
     font-weight: 500;
+    transition-duration: 0.5s;
 }
 
 .main-menu>ul>li>ul>li>a:hover{
@@ -127,36 +145,34 @@ a{
 .menu-two{
     display: block;
     transition-property: all;
-    transition-duration: 0.2;
-    transition-delay: 0.2s;
     visibility: hidden;
     opacity: 0;
+    transition-duration: 0.5s;
 }
 
 .level-menu:hover .menu-two{
   opacity: 1;
+  max-width: 200px;
   visibility: visible;
   position: absolute;
   background-color: #fff;
-  padding: 20px 25px;
-  right: 200px;
+  padding: 25px 20px;
+  right: 230px;
   top: 30px;
   width: max-content;
-  
+  box-shadow: 1px 15px 35px 1px #999;
 }
+/* Menu end */
 
+/* Header end */
 
-
+/* Section 1 Start */
 .main{
     padding-top: 320px;
-    width: 1130px;
-    max-width: 98%;
     margin: 0 auto;
     display: flex;
-    background-color: #fff;
     align-items: center;
-    width: 100%;
-    height: 88%;
+    background: #f9f9ff;
 }
 
 .banner-left{
@@ -196,6 +212,8 @@ button{
     border: none;
     margin-top: 50px;
     background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+    box-shadow: 1px 15px 35px 1px #999;
+
   }
 
   button a{
@@ -206,7 +224,6 @@ button{
 
   .main-right{
     width: 50%;
-    margin-top: 10%;
     height: 80%;
     position: absolute;
     bottom: 0;
@@ -218,6 +235,10 @@ button{
     width: 550px;
   }
 
+  /* Section 1 end */
+
+
+  /* Section 2 Start */
   .second-main{
     padding-top: 320px;
     width: 1130px;
@@ -259,6 +280,24 @@ button{
     font-size: 20px;
     line-height: 30px;
   }
+  /* Section 2 end */
+
+
+  /* Section 3 Start */
+  .text{
+    display: flex;
+    justify-content: center;
+  }
+
+  .title{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 17px;
+    padding-left: 15px;
+    max-width: 50%;
+  }
+  
 
   .information{
     padding-top: 200px;
@@ -280,3 +319,95 @@ button{
     line-height: 30px;
   }
 
+  /* Section 3 end */
+  
+  /* Section 4 Start */
+  .row{
+    display: flex;
+    flex-wrap: wrap; 
+    margin-left: 150px;
+    margin-top: 50px;
+  }
+
+ .the-boxes{
+  flex: 0 0 30%;
+  max-width: 50%;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  
+ }
+
+ .chart p{
+  max-width: 318px;
+  font-size: 18px;
+  display: block;
+  text-align: center;
+  margin-left: 80px;
+  margin-top: 20px;
+  opacity: 0.7;
+ }
+
+ .chart a{
+  color: #000;
+  font-weight: 800px;
+  text-align: center;
+  transition-duration: 0.5s;
+  
+ }
+
+ .chart a:hover{
+  color: #007bff;
+ }
+
+ .icons{
+  width: 55px;
+  margin-left: 228px;
+
+ }
+
+ #icon:hover{
+  color: #007bff;
+ }
+
+#icon{
+  margin-left: 220px;
+  transition-duration: 0.5s;
+}
+/* Section 4 end */
+
+/* Section 5 Start */
+#section-five{
+  background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 90%);
+  padding: 90px 0;
+}
+
+.next-row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 320px;
+}      
+
+.boxes{
+  flex: 0 0 20%;
+  max-width: 20%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.boxes h1{
+  color: #fff;
+  font-weight: 700;
+  font-size: 47px;
+  margin-left: 90px;
+  
+}
+
+.boxes p{
+  font-size: 19px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+}
+  
+/* end project */
